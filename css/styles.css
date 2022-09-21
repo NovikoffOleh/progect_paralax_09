@@ -145,6 +145,7 @@ padding: 50px 20px;
 }
 .content::before {
     content: "";
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
