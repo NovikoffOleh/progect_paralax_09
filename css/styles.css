@@ -170,6 +170,26 @@ padding: 50px 20px;
     margin: 0px 30px 30px 30px;
 }
 
+@media (man-width: 767px) {
+    .paralax__title {
+        font-size: 50px;
+    }
+    .paralax__label {
+        font-size: 16px;
+        margin: 0px 0px 15px 0px;
+        }
+}
+
+@media (man-width: 479px) {
+    .paralax__title {
+        font-size: 36px;
+    }
+    .paralax__label::before {
+        flex: 0 0 50px;
+        margin: 0px 10px 0px 0px;
+    }
+}
+
 
 button {
     cursor: pointer;
