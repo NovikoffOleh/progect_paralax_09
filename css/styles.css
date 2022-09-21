@@ -1,0 +1,206 @@
+/*обнуление*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+list-style: none;
+}
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+img{
+    vertical-align: top;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    background-color: rgb(5, 5, 5);
+    font-size: 16px;
+    color: white;
+    font-family: serif;
+}
+
+.wrapper{
+min-height: 100%;
+}
+._container{
+max-width: 1000px;
+margin: 0px auto;
+padding: 50px 20px;
+}
+.paralax {
+    min-height: 100vh;
+}
+
+.paralax__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.paralax__container {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+}
+
+.paralax__label {
+    color: yellow;
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin: 0px 0px 30px 0px;
+    align-items: center;
+
+}
+.paralax__label::before{
+    content: "";
+    background-color: yellow;
+    flex: 0 0 70px;
+    margin: 0px 30px 0px 0px;
+    height: 1px;
+}
+.paralax__title {
+    font-size: 88px;
+}
+
+.paralax__images {
+    position: absolute;
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        left: -10%;
+        z-index: 1;
+        /*делаем размеры немного больше чтоб выходило за рамки контейнера*/
+}
+
+.images-paralax {}
+
+.images-paralax__item {
+    position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+}
+
+.images-paralax__clouds,
+.images-paralax__mountains,
+.images-paralax__human {
+    position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0%;
+}
+.images-paralax__clouds{
+    background: url(../img/clouds.jpg) top / cover no-repeat;
+    top: 0;
+}
+.images-paralax__mountains {
+    background: url(../img/mountains.png) top / cover no-repeat;
+        top: 15%;
+        z-index: 2;
+}
+
+.images-paralax__human {
+    background: url(../img/human.png) top / cover no-repeat;
+    top: 45%;
+        z-index: 3;
+}
+@media (max-aspect-ratio: 3/2){
+    .images-paralax__human{ /*этот медиазапрос для того чтобы человек помешался н маленькие мониторы*/
+        background-position: 20% top ;
+    }
+}
+.content {
+    position: relative;
+    background-color: rgb(42, 50, 78);
+    z-index: 2;
+}
+
+.content__container {}
+
+.content__title {
+    font-size: 35px;
+    margin: 0px 30px 30px 30px;
+}
+
+.content__text {
+    font-size: 16px;
+    line-height: 150%;
+}
+.content__text p {
+    margin: 0px 30px 30px 30px;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 120px;
+    border-color: transparent;
+    background: transparent;
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .btn {
+        padding-top: 120px;
+    }
+}
+
+.btn :hover {
+    fill: #2196F3;
+}
+
+.btn:focus {
+    fill: #2196F3;
+}
+
+
+
+/*@media screen and (min-width: 1200px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+}*/
+
+
